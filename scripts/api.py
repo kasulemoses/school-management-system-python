@@ -27,8 +27,18 @@ def main() -> None:
             ["pytest"],
         ],
         "format": [
-            ["ruff", "check", "--config", "pyproject.toml", "--fix", ".", "../../scripts"],
+            [
+                "ruff",
+                "check",
+                "--config",
+                "pyproject.toml",
+                "--fix",
+                "--exit-zero",
+                ".",
+                "../../scripts",
+            ],
             ["ruff", "format", "--config", "pyproject.toml", ".", "../../scripts"],
+            ["ruff", "check", "--config", "pyproject.toml", ".", "../../scripts"],
         ],
     }
     for command in commands[arguments.command]:

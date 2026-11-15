@@ -34,7 +34,7 @@ Both environments and caches are ignored by Git. Other developers recreate them 
 
 ## 3. Read the application
 
-Start with `apps/api/app/main.py`. It imports FastAPI, creates the `app` object with a title/description, and attaches the health router with `include_router`. Routers let us organize future student, attendance, and finance endpoints into modules.
+Start with `apps/api/app/main.py`. It calls `create_app()` from `apps/api/app/application.py` to create the application object. The application factory sets the title/description and attaches the health router with `include_router`. Checkpoint 2 added settings, error handling, and a versioned learning router there. Routers let us organize future student, attendance, and finance endpoints into modules.
 
 Next read `apps/api/app/api/health.py`. Its core behavior is:
 
@@ -104,8 +104,8 @@ Stop an existing server before using the debugger because both use port 8000. [V
 python3.13 scripts/api.py check
 ```
 
-This runs Ruff code checks, a formatting check, and pytest. The HTTP tests cover the public health contract and available documentation/OpenAPI. They do not contact Neon, Firebase, or a database.
+This runs Ruff code checks, a formatting check, and pytest. The suite now covers health/documentation plus checkpoint 2's validation, settings, errors, and browser-origin behavior. It does not contact Neon, Firebase, or a database. Each test application is built with explicit settings so your local `.env` does not control the tested behavior.
 
 Use `python3.13 scripts/api.py test` for tests only. Use `python3.13 scripts/api.py format` to apply automatic fixes/formatting, inspect the changes, and rerun checks. GitHub repeats setup and checks on Linux through the committed workflow.
 
-Before the next checkpoint, explain the application object, server process, route decorator, response model, virtual environment, lockfile, and HTTP response. Next we add request validation/settings, then PostgreSQL models, sessions, and Alembic migrations.
+Before moving on, explain the application object, server process, route decorator, response model, virtual environment, lockfile, and HTTP response. [Checkpoint 2](CHECKPOINT_02.md) adds request validation/settings; PostgreSQL models, sessions, and Alembic migrations follow.

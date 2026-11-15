@@ -1,6 +1,6 @@
 # Learning Python as a web backend
 
-You already know Python. These checkpoints focus on web/backend concepts and use the student management system as the example. The first runnable checkpoint is documented in [Development](DEVELOPMENT.md); later sections describe upcoming work.
+You already know Python. These checkpoints focus on web/backend concepts and use the student management system as the example. The first runnable checkpoint is documented in [Development](DEVELOPMENT.md), followed by [request validation and settings](CHECKPOINT_02.md). Persistence and later sections describe upcoming work.
 
 ## How each session works
 
