@@ -1,0 +1,34 @@
+# Local environments, credentials, and dependencies
+.env
+.env.*
+!.env.example
+.venv/
+.tools/
+.cache/
+node_modules/
+
+# Python and test output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Application and local data
+.next/
+*.log
+*.sqlite*
+.local/
+coverage/
+playwright-report/
+test-results/
+.DS_Store
+
+# Private credentials and data must stay out of Git
+*-adminsdk-*.json
+service-account*.json
+credentials*.json

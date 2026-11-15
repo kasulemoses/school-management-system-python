@@ -1,6 +1,6 @@
 # Learning Python as a web backend
 
-You already know Python. These checkpoints focus on web/backend concepts and use the student management system as the example. This is the sequence for implementation sessions, not an instruction to run commands against files that have not yet been created.
+You already know Python. These checkpoints focus on web/backend concepts and use the student management system as the example. The first runnable checkpoint is documented in [Development](DEVELOPMENT.md); later sections describe upcoming work.
 
 ## How each session works
 
@@ -80,6 +80,6 @@ Separate local/staging/production configuration, apply migrations once per relea
 
 ## First implementation session
 
-We will inspect tools, choose the interpreter, set up the isolated Python project in VS Code, and run the health endpoint. We will explain each command before introducing PostgreSQL, authentication, or the frontend.
+Checkpoint 1 now provides Python 3.13 setup, a VS Code workspace configuration, and a running health endpoint. Follow [Development](DEVELOPMENT.md) to inspect each command and trace a request before introducing PostgreSQL, authentication, or the frontend.
 
 References: [FastAPI first steps](https://fastapi.tiangolo.com/tutorial/first-steps/), [FastAPI application structure](https://fastapi.tiangolo.com/tutorial/bigger-applications/), [Database integration](https://fastapi.tiangolo.com/tutorial/sql-databases/), [Firebase token verification](https://firebase.google.com/docs/auth/admin/verify-id-tokens).
