@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Python API: start",
+      "type": "process",
+      "command": "${workspaceFolder}/apps/api/.venv/bin/python",
+      "args": ["-m", "uvicorn", "app.main:app", "--reload", "--host", "127.0.0.1", "--port", "8000"],
+      "options": {"cwd": "${workspaceFolder}/apps/api"},
+      "windows": {"command": "${workspaceFolder}/apps/api/.venv/Scripts/python.exe"},
+      "problemMatcher": [],
+      "presentation": {"reveal": "always", "panel": "dedicated"},
+      "runOptions": {"instanceLimit": 1}
+    },
+    {
+      "label": "Python API: test",
+      "type": "process",
+      "command": "${workspaceFolder}/apps/api/.venv/bin/python",
+      "args": ["-m", "pytest"],
+      "options": {"cwd": "${workspaceFolder}/apps/api"},
+      "windows": {"command": "${workspaceFolder}/apps/api/.venv/Scripts/python.exe"},
+      "problemMatcher": [],
+      "group": {"kind": "test", "isDefault": true}
+    }
+  ]
+}

@@ -2,6 +2,16 @@
 
 Revised: 15 November 2026. Architecture: Next.js → Python/FastAPI → Neon PostgreSQL, with Firebase Authentication. These are planning issue IDs, not existing GitHub issues. Complete the learning checkpoints before expanding the application. No application tasks below are marked complete merely because the plan exists.
 
+## Implementation status
+
+- SETUP-01: Implemented with Python 3.13, isolated tooling/application environments, locked dependencies, VS Code configuration, and setup instructions.
+- API-01: Implemented with FastAPI/Uvicorn, `GET /health`, interactive documentation, and HTTP checks.
+- API-02: Implemented with Pydantic input/output schemas, a versioned local learning route, validated settings, exact CORS origins, safe errors, and request IDs. The learning route does not create records and is disabled outside local/test runs.
+- DB-01 onward: Upcoming. PostgreSQL persistence, identity verification, and school permissions follow.
+
+Follow [Development](DEVELOPMENT.md) to run the checkpoint and understand each part.
+Continue with [Checkpoint 2](CHECKPOINT_02.md) to exercise successful and rejected requests.
+
 ## SETUP-01 — Establish the Python project and VS Code workspace
 
 **Deliver:** Supported interpreter selection, isolated virtual environment, pyproject and lockfile, clear backend directory structure, environment examples, VS Code interpreter/debug settings, and README setup instructions.
